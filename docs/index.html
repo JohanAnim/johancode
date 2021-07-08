@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="otros/javascript/librerías/bootstrap-3.3.7/dist/css/bootstrap.min.css">
     <link href="otros\css\archivo de estilo.css" rel="stylesheet">
 	<link href="otros\css\menu desplegable.css" rel="stylesheet">
-<link href="otros\css\lista desplegable2.css" rel="stylesheet">
+<link href="otros/css/bootstrap-accessibility.css" rel="stylesheet">
 <link rel="stylesheet" href="otros/css/email.css">
 
 <title>Codificando a ciegas.</title>
@@ -29,7 +29,7 @@
 		 <a href="javascript:onclick(location.href= '#home')" class="sr-only">Saltar al contenido</a>
     
          <div class="dropdown" >        
-        <button  accesskey="m" id="menuprincipal" class="btn btn-danger" data-toggle="collapse" data-target="#menu1" aria-expanded="false">Menú principal.</button>
+        <button accesskey="m" id="menuprincipal" class="btn btn-danger" data-toggle="collapse" data-target="#menu1" aria-expanded="false">Menú principal.</button>
             
           <div id="menu1" class="collapse" role="region" area-label="Vista de menú" aria-label="Menu">
             <h2>Enlaces de inicio.</h2>
@@ -199,26 +199,29 @@ A parte de las futuras lecciones y tutoriales, también subiré mis composicione
 </div>
 <div class="container">
     <h3>Rellena el formulario de contacto:</h3>
-    <form id="form" role="form">
+    <form id="form">
         <div class="field">
-          <label for="from_name">Tu nombre:</label>
-          <input type="text" name="from_name" id="from_name" required>
+          <label for="from_name">from_name</label>
+          <input type="text" name="from_name" id="from_name">
         </div>
         <div class="field">
-          <label for="mensaje">Su mensaje:</label>
-          <textarea type="text" name="mensaje" id="mensaje"></textarea>
+          <label for="mensaje">mensaje</label>
+          <input type="text" name="mensaje" id="mensaje">
         </div>
         <div class="field">
-          <label for="user_email">Su correo electrónico:</label>
-          <input type="text" name="user_email" id="user_email" required>
+          <label for="user_email">user_email</label>
+          <input type="text" name="user_email" id="user_email">
         </div>
-        
         <div class="field">
-            <label for="pregunta_programacion">¿Eres programador?</label>
-            <input type="checkbox" name="pregunta_programacion" id="pregunta_programacion" value="Sí, soy programador">
-          </div>
-        
-        <input type="submit" id="button" value="Enviar" >
+          <label for="pregunta_programacion">pregunta_programacion</label>
+          <input type="text" name="pregunta_programacion" id="pregunta_programacion">
+        </div>
+        <div class="field">
+          <label for="reply_to">reply_to</label>
+          <input type="text" name="reply_to" id="reply_to">
+        </div>
+      
+        <input type="submit" id="button" value="Send Email" >
       </form>
     </div>
 
@@ -234,7 +237,7 @@ A parte de las futuras lecciones y tutoriales, también subiré mis composicione
 	<script src="otros/javascript/Archivo.js"></script>
 <script src="otros/javascript/audios.js"></script>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script type="text/javascript" src="otros/javascript/email.js"></script>
 
 </body>
