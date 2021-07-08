@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <style>
+      body {
+         background-color: rgb(169, 236, 238);
+      color: #000000;
+      font-size: 20px;
+      }
+h1 h2 h3 {
+   text-align: center;
+text-decoration: none;
+font-size: 30px;
+font-family: Arial, Helvetica, sans-serif;
+background-color: blue;
+}
+table {
+   width: 100%;
+text-align: center;
+}
+button {
+   width: 50%;
+height: 50%;
+background-color: blueviolet;
+font-size: 40px;
+}
+.casilla {
+   width: 30%;
+text-align: center;
+}
+p {
+            border-style: ridge;
+            border-color: rgb(68, 158, 158);
+            border-radius: 24px;
+            text-align: center; 
+            font-size: 30px;
+            background-color: rgb(104, 240, 194); 
+         visibility: visible;
+      }
+.bor {
+   float: left;
+text-align: left;
+width: 50%;
+}
+.enviar {
+   width: 50%;
+float: right;
+text-align: right;
+background-color: red;
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<title>Bienvenidos a form language.</title>
+</head>
+<body>
+   <main>
+      <h1>Formulario para preferencia de lenguaje</h1>
+   </main>
+   <form action="mailto:gutierrezjohanantonio@gmail.com?subject=Mensaje para desarrolladores" method="POST" enctype="text/plain" accept-charset="utf-8">
+      <label for="nombre">Ingrese su nombre</label>
+      <input type="text" name="nombre" size="45" maxlength="45" placeholder="Escriba su nombre:" tabindex="0" id="nombre" autofocus><br>
+<label for="texto">Escriba su mensaje:</label>
+<textarea name="Su mensaje" id="texto" cols="60" rows="10" placeholder="Escriba un comentario"></textarea>
+<fieldset>
+<legend>Elige tus lenguajes preferidos:</legend>
+<input type="checkbox" value="HTML" name="Lenguaje" title="HTML"> HTML<br>
+<input type="checkbox" value="PHP" name="Lenguaje" title="PHP">PHP<br>
+<input type="checkbox" value="JavaScript" name="Lenguaje" title="JavaScript">JavaScript<br>
+<input type="checkbox" value="Java" name="Lenguaje" title="Java" > Java<br>
+<input type="checkbox" value="CMasMas" name="Lenguaje" title="C++">C++<br>
+<input type="checkbox" value="C" name="Lenguaje" title="C"> C<br>
+<input type="checkbox" value="C#" name="Lenguaje" title="C#"> C#<br>
+<input type="checkbox" value="Python" name="Lenguaje" title="Python"> Python<br>
+</fieldset>
+<label for="plataforma">Seleccione su plataforma</label>
+<input type="radio" name="plataforma" id="plataforma" value="Windows" title="Windows">Windows<br>
+<input type="radio" name="plataforma" id="plataforma" value="Mac" title="Mac">Mac<br>
+<input type="radio" name="plataforma" id="plataforma" value="Linux" title="Linux">Linux<br>
+<input type="radio" name="plataforma" id="plataforma" value="Android" title="Android">Android<br>
+<input type="radio" name="plataforma" id="plataforma" value="IOS" title="IOS">IOS<br>
+<label for="Tipo de desarrollo">Elija su tipo de desarrollo</label>
+<select name="Tipo de desarrollo" id="Tipo de desarrollo">
+   <option value="web">web</option>
+   <option value="Lenguaje de programación">lenguaje de programación</option>
+   <option value="Lenguaje de scripts">lenguaje de scripts</option>
+   <option value="Todos los mencionados" >Todos los mencionados</option>
+</select>
+<label for="Tipo de contenido">Elije tipo de contenido</label>
+<select name="Tipo de contenido" id="Tipo de contenido" size="4" multiple>
+   <option value="Página web">Página web</option>
+   <option value="Aplicaciones">Aplicaciones</option>
+<option value="AudioJuegos">AudioJuegos</option>
+<option value="VideoJuegos">VideoJuegos</option>
+<option value="Plugins">Plugins</option>
+<option value="Todos" >Todas</option>
+</select>
+<div width="400px" high="400px" class="bor">
+   <input type="reset" value="Eliminar"><br>
+</div>
+   <div width="400px" high="400px" class="enviar">
+      <input type="submit" value="Enviar" onclick="alert('En hora buena, su solicitud se ha procesado correctamente. Pulse aceptar para continuar');">
+   </div>
+</form>
+   <script>
+
+   </script>
+</body>
+</html>

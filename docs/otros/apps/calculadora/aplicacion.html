@@ -1,0 +1,142 @@
+﻿<!doctype html>
+<html>
+<head>
+
+	<link rel="stylesheet" href="css/calculadora.css">
+	<link href="js/bootstrap-3/css/bootstrap.min.css" rel="stylesheet">
+
+
+<title>Calculadora-Accesible.</title>
+<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+</head>
+<body >
+<!-- Página creada por JohanMusic -->
+
+<header>
+	<div class="dropdown">
+		<button class="btn btn-secondary dropdown-toggle " type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" accesskey="h">Más opciones</button>
+	<ul role="menu" class="dropdown-menu" aria-labelledby="triggerId">
+		<li role="presentation">	
+		<a role="menuitem" class="dropdown-item" href="http://www.johancode.byethost7.com">Ir a la página de inicio</a>
+		</li>	
+		<li role="presentation">
+			<a role="menuitem" class="dropdown-item" href="#" data-toggle="modal" data-target="#myModal">Configuración</a>
+		</li>
+		<li role="presentation">
+		<a role="menuitem" class="dropdown-item" href="html/acerca.html">Acerca de</a>
+	</li>
+
+	</ul>
+	</div>
+
+</header>
+		  <audio src=""></audio>
+<audio class="audioIgual" src=""></audio>
+<audio class="audioBorrar" src=""></audio>
+<audio class="audioFondo" src=""></audio>
+<main><h1>Comienza a calcular.</h1></main>
+<table border="4" role="region" aria-label="Aplicación para calcular.">
+	<tr>
+<td colspan="4"><textarea id="result" class="mensaje" readonly cols="40" rows="5" style="resize: both;" placeholder="cálculo:" autofocus ></textarea></td>
+	</tr>
+<tr>
+<td class="reproductor1" ><button onclick="add('1')" accesskey="1">1</button></td>
+<td class="reproductor2" ><button onclick="add('2')" accesskey="2">2</button></td>
+<td class="reproductor3"><button onclick="add('3')" accesskey="3">3</button></td>
+<td class="reproductorMas"><button onclick="add('+')" accesskey="+">+</button></td>
+</tr>
+<tr>
+<td class="reproductor4"><button onclick="add('4')" accesskey="4">4</button></td>
+<td class="reproductor5"><button onclick="add('5')" accesskey="5">5</button></td>
+<td class="reproductor6"><button onclick="add('6')" accesskey="6">6</button></td>
+<td class="reproductorMen"><button onclick="add('-')" accesskey="-">Menos: -</button></td>
+</tr>
+<tr>
+<td class="reproductor7"><button onclick="add('7')" accesskey="7">7</button></td>
+<td class="reproductor8"><button onclick="add('8')" accesskey="8">8</button></td>
+<td class="reproductor9"><button onclick="add('9')" accesskey="9">9</button></td>
+<td class="reproductorMul"><button onclick="add('*')" accesskey="*" aria-label="Multiplicar">*</button></td>
+</tr>
+<tr>
+<td class="reproductorPors"><button onclick="add('%')" accesskey="%">%</button></td>
+<td class="reproductor0" colspan="2"><button onclick="add('0')" accesskey="0">0</button></td>
+<td class="reproductorDib"><button onclick="add('/')" accesskey="/" aria-label="Dividir">/</button></td>          
+</tr>
+<tr>
+<td id="reproductorBorrar" class="reproductorBor" colspan="2" onclick="location.href='#result'"><button onclick="del()" class="ac" accesskey="b" class="mensaje2" aria-label="Borrar">AC</button></td>
+<td class="reproductorSic"><button onclick="add('.')" accesskey=".">Punto: .</button></td>
+<td id="playbutton" class="reproductorIgual" onclick="location.href='#result'"><button onclick="calc()" class="Igual"  accesskey="=">=</button></td>            
+</tr>
+</table>
+
+<div class="modal fade" id="myModal" tabindex="0" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		 <div class="modal-header">
+			<div tabindex="-1" role="toolbar">Ajustes de la calculadora</div>
+			<hr>
+			<h4 class="modal-title" id="myModalLabel">Configuración</h4>
+		 </div>
+		 <div class="modal-body">
+	 
+	 <div role="tabpanel">
+	  <!-- Nav tabs -->
+	  <ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active">
+				 <a href="#home" aria-controls="home" role="tab" data-toggle="tab">Voz</a>
+			</li>
+			<li role="presentation">
+				 <a href="#tab" aria-controls="tab" role="tab" data-toggle="tab">Vibración</a>
+			</li>
+			<li role="presentation">
+			  <a href="#accesibilidad" aria-controls="tab" role="tab" data-toggle="tab">Accesibilidad</a>
+		 </li>
+		 </ul>
+ 
+	  <!-- Tab panes -->
+	  <div class="tab-content">
+			<div role="tabpanel" class="tab-pane active" id="home">
+				<div role="group" aria-label="Seleccionar sintetizador y voz" aling="right">
+					<label for="voiceselection">Selecciona la voz:</label>		
+					<select id="voiceselection" onclick="responsiveVoice.speak('Select a voice', 'US English Female');" class="voces">
+					<option tabindex="-1" value="">(No ha seleccionado ninguna voz) Pulsa aquí para elegir una</option>
+					</select>
+		
+				</div> 
+
+ </div>
+			<div role="tabpanel" class="tab-pane" id="tab">Ajusta el aspecto y colores de la página</div>
+			<div role="tabpanel" class="tab-pane" id="accesibilidad"><p>Ajusta las opciones de accesibilidad</p></div>
+		 </div>
+ </div>          
+
+	</div>
+		 <div class="modal-footer">
+			<a href="#" role="button" class="close" data-dismiss="modal" aria-hidden="false">Cancelar</a>
+			<a href="#" role="button" class="btn btn-default" data-dismiss="modal">Aceptar</a>
+		 </div>
+	  </div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+ </div><!-- /.modal --></div>
+</div>
+
+<footer>
+<div class="copyright">
+	&copy; 2020 JohanMusic. Todos los derechos reservados.</div>
+</footer>
+
+<script src="js/jquery/jquery-3.4.1.min.js"></script>
+<script src="js/shortcut/shortcut.js"></script>
+
+<script src="js/bootstrap-3/js/bootstrap.min.js"></script>
+<script src="js/bootstrap-accessibility.min.js"></script>
+<script src="js/responsivevoice.js"></script>
+<script src="js/tts.js"></script>
+
+<script src="js/teclas.js"></script>
+<script src="js/calculadora.js"></script>
+<script src="js/audioCal.js"></script>
+
+</body>
+</html>

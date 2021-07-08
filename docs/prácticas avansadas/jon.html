@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+   <head>
+<meta charset="utf-8">
+      <title>Centro de mi proyecto.</title>
+<style>
+.lista {
+   background-color: red;
+color: yellow;
+font-size: 30px;
+position: absolute;
+display: none;
+}
+</style>
+   </head>
+<body onload="fondo()">
+<audio src=""></audio>
+   <button>Página principal</button>
+   <h1 style="text-align: center; background-color: blue;">Bienvenidos.</h1>
+   <p>E<b>ste es mi espacio para programar.<br> lo siguiente</p>
+<table >
+<caption>Mis animes favoritos según el género</caption>
+<tr>
+   <th>Aventura</th>
+   <th>Acción</th>
+<th>Comedia</th>
+<th>Música</th>
+<th>Romanse</th>
+<th>Shonnen</th>
+</tr>
+<tr >
+   <td class="anime">Pokemon</td>
+<td>Dragon ball</td>
+<td>One piece</td>
+<td>El bosque del Piano</td>
+<td>Ranma 1-2</td>
+<td>Yugi o</td>
+</tr>
+
+</table>
+      <h2>que es lo que veremos.</h2>
+
+<p>La programaciónes una tecnología</p>
+<label for="menu">Cuadro de menú</label>
+   <select name="miSelect" class="lista" id="menu" title="use las teclas direccionales para moverse, y pulse enter para activar." >
+   <option value="" disabled selected></option>
+   <option value="inicio">Ir al inicio</option>
+   <option value="Te quedan: 3 vidas, 50% de energía, 45% de ambre, 100% de fuerza. Es todo.">Ir al inbentario</option>
+   <option value="2">Ver los comentarios</option>
+   <option value="3">Acerca de</option>
+</select>
+
+<script src="../atajosTeclado/shortcut/shortcut.js"></script>
+<script>
+document.querySelector(".anime").addEventListener("click", function() {
+   decir("Lista de animes según su género");
+});
+function fondo() {
+      let sonido = document.querySelector("audio");
+      sonido.setAttribute("src", "Mi corazón encantado.mp3");
+      sonido.setAttribute("loop", "loop");
+      sonido.play();
+   sonido.volume ="0.4";
+   sonido.currentTime="2.6"
+   }
+   // variables útiles a usar
+   var select = document.querySelector(".lista");
+   var escape = document.querySelector("button")
+escape.title="Pulsa alt + m para abrir el menú";
+select.addEventListener('change', function(){
+    var selectedOption = this.options[select.selectedIndex];
+    decir( selectedOption.text);
+  });
+   
+   // aquí están los llamados del teclado
+   shortcut.add("alt+m",function() {
+select.style.display ="block";
+select.focus();
+});
+   shortcut.add("escape",function() {
+select.style.display ="none";
+   escape.focus();
+});
+shortcut.add("ctrl+shift",voz)
+function voz() {
+   if (speechSynthesis.speaking) {
+                    //Si ya está hablando, lo paramos
+                    speechSynthesis.cancel();
+   }
+                  }
+// Los llamados del foco para los item de la lista
+
+select.addEventListener("focus", function() {
+decir("Lista con 4 elementos abierta")
+
+}   );
+escape.addEventListener("focus", function() {
+decir("A salido de la lista");
+}   );
+select.addEventListener("click", function() {
+   var selectedOption = this.options[select.selectedIndex];
+   decir(selectedOption.value)
+});
+item.addEventListener("click", function() {   
+   var selectedOption = this.options[item.selectedIndex];
+decir( selectedOption.value+"Lo ciento, los comentarios están desabilitados.")
+});
+   // Audios de el programa a usar
+   
+   // Función de voz para la lista
+function decir(texto) {
+        var texto  = new SpeechSynthesisUtterance(texto);
+        texto.voice = speechSynthesis.getVoices()[7];
+        texto.rate = 1.2;
+        texto.pitch = 1;
+        speechSynthesis.speak(texto);
+        }
+
+</script>
+</body>
+   </html>

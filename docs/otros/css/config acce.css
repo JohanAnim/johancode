@@ -1,0 +1,22 @@
+body {
+   background-image:url(imájenes\katerin.png);
+   background-color:white;
+}
+button 
+{background-color: #7d2181; 
+}
+table {
+width: 50%; 
+high: 50%; 
+background-color: #ffffff; 
+}
+p {
+   color:black;
+}
+p {
+   text-indent:10px;
+}
+h1 {
+   font-size:30pt;
+   text-shadow:rgba(0,0,255,1) -1px -2px 0.5em;
+}

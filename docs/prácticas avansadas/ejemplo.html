@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+   <head>
+    <meta charset="utf-8">
+<link href="bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="bootstrap-accessibility.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Ejemplo de código html</title>
+   
+</head>
+<body>
+<header>
+<div class="container">
+<div class="dropdown">
+   <button class="dropdown-toggle" type="button"  data-toggle="dropdown" aria-expanded="false">Mas occiones<span class="caret"></span></button>
+   <ol role="menu" class="dropdown-menu"  aria-labelledby="dLabel"">
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.johancode.tonohost.com">Página principal</a></li>
+<li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.johancode.byethost7.com" >Página secundaria.</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.johancode.tonohost.com/otros/apps/calculadora/calculadora.html">Programa: Calculadora accesible</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Acerca de</a></li>
+   </ul>
+ </div>
+</div>
+</header>
+
+<div id="negro1">Hola amigo</div><br>
+<button id="negro2" onclick="aparecer()">Desaparecer</button><br>
+
+<button type="button" data-toggle="modal" data-target="#myModal">Configuración</button>
+  <div class="modal fade" id="myModal" tabindex="0" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div tabindex="-1" role="toolbar">Ajustes de esta página web</div>
+            <hr>
+            <h4 class="modal-title" id="myModalLabel">Configuración</h4>
+          </div>
+          <div class="modal-body">
+       
+       <div role="tabpanel">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#home" aria-controls="home" role="tab" data-toggle="tab">Inicio</a>
+            </li>
+            <li role="presentation">
+                <a href="#tab" aria-controls="tab" role="tab" data-toggle="tab">comportamiento</a>
+            </li>
+            <li role="presentation">
+              <a href="#accesibilidad" aria-controls="tab" role="tab" data-toggle="tab">Accesibilidad</a>
+          </li>
+          </ul>
+    
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home">
+    
+              <p>Ajusta opciones predefinidas, selecciona los componentes que deseas activar."</p>
+              <div role="dialog" aria-label="Configuración inicial.">
+              <div role="group" aria-label="Comportamiento inicial del sitio">
+    <label><input type="checkbox" title="Todos los datos se guardarán al serrar este sitio" id=""> Guardar los datos al serrar el sitio.</label><br>
+    <label><input type="checkbox" title="Si activas esta opción, se podrán escuchar sonidos" id=""> Activar sonidos</label>
+    </div>        
+    <div role="radiogroup" aria-label="Activar opciones avansadas">
+    <label><input type="radio" title="Apagado" id=""> Off</label><br>
+    <label><input type="radio" title="Ensendido" id=""> On</label>
+    </div>
+    </div>
+    </div>
+            <div role="tabpanel" class="tab-pane" id="tab">Ajusta el aspecto y colores de la página</div>
+            <div role="tabpanel" class="tab-pane" id="accesibilidad"><p>Ajusta las opciones de accesibilidad</p></div>
+          </div>
+    </div>          
+
+      </div>
+          <div class="modal-footer">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="false">Canselar</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Asebtar</button>
+            <button type="button" class="btn btn-primary">Guardar</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal --></div>
+ </div>
+   
+
+ <main>   
+   <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo" aria-expanded="false">
+      simple collapsible
+    </button>
+    
+    <div id="demo" class="collapse">Estoy aparesiendo</div>
+   <h1 >Bienvenidos a mi web.</h1>
+</main>
+
+<div id="demo">Mi ejemplo</div>
+
+
+<script src="shortcut/shortcut.js"></script>
+<script src="jquery/jquery-3.4.1.min.js"></script>
+<script src="bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+<script src="bootstrap-accessibility.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>
+
+<script>
+  function aparecer() {
+  var valor1 = document.querySelector("#negro1");
+var valor2 = document.querySelector("#negro2");
+  var sonido = document.querySelector("audio");
+  if(valor2.innerHTML == "Desaparecer") {
+    valor2.innerHTML="Aparecer";
+    valor2.title="Aparecer";
+    valor1.style="display:none";
+    sonido.setAttribute("src", "audio1.mp3")
+  sonido.play();
+  document.querySelector("title").innerHTML="Ejemplo de código html";
+document.body.style="background-color: skyblue";
+
+}
+  else if(valor2.innerHTML == "Aparecer") {
+    document.body.style="background-color: red";
+    valor2.innerHTML="Pulsa de nuevo";
+    valor2.title="Pulsa de nuevo";
+  document.querySelector("title").innerHTML="Se a cambiado el titulo de esta página.";
+  }
+  else {
+    document.body.style="background-color: green";
+    valor2.innerHTML="Desaparecer";
+    valor2.title="Desaparecer";
+    valor1.style = "display:block";
+    sonido.setAttribute("src", "audio.mp3");  
+  sonido.play();
+  }
+  }
+shortcut.add("alt+b", aparecer)
+</script>
+</body>
+   </html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <title>Campo de texto multi idioma.</title>
+<style>
+   body {
+      background-color: gray;
+   font-size: 25px;
+      color: black
+   
+   }
+.seleccion {
+   font-size: 30px;
+text-align: center;
+display: block;
+height: auto;
+float: left;
+}
+</style>
+</head>
+<body>
+   <audio src=""></audio>
+   <main class="home">
+      <h1>Prueva a escribir en diferentes idiomas.</h1>
+   </main>
+   <div class="seleccion">
+   <fieldset>
+      <legend>Elige el idioma a escribir</legend>
+      <label><input type="radio" onclick="Idioma()" id="" checked> Idioma de el sistema</label>
+      <label><input type="radio" onclick="idioma1()" id=""> Español</label>
+   <label><input type="radio" onclick="idioma2()" id=""> Inglés</label>
+   <label><input type="radio" onclick="idioma3()" id=""> Fransés</label>
+   <label><input type="radio" onclick="idioma4()" id=""> Portugués</label>
+   <label><input type="radio" onclick="idioma5()" id=""> Japonés</label>
+   </fieldset>
+   </div>
+   <form>   
+   <input id="idiomas" type="text" placeholder="Escribe texto según el idioma de el sistema">
+<button type="reset">Borrar texto</button>
+</form>
+   <script>
+   let idioma = document.getElementById("idiomas");
+   let sonido = document.querySelector("audio");
+   function Idioma() {
+      idioma.setAttribute("placeholder", "Escribe texto según el idioma de el sistema");
+   sonido.setAttribute("src", "idioma.mp3");
+sonido.play();   
+}
+   function idioma1() {
+      idioma.setAttribute("placeholder", "Escribe texto en español");
+   idioma.setAttribute("lang", "es");
+   sonido.setAttribute("src", "idioma1.mp3");
+sonido.play();   
+}
+   function idioma2() {
+      idioma.setAttribute("placeholder", "Escribe texto en inglés");
+   idioma.setAttribute("lang", "en");
+   sonido.setAttribute("src", "idioma2.mp3");
+sonido.play();   
+}
+   function idioma3() {
+      idioma.setAttribute("placeholder", "Escribe texto en fransés");
+   idioma.setAttribute("lang", "fr");
+   sonido.setAttribute("src", "idioma3.mp3");
+sonido.play();   
+}
+   function idioma4() {
+      idioma.setAttribute("placeholder", "Escribe texto en portugués");
+      idioma.setAttribute("lang", "pt");
+      sonido.setAttribute("src", "idioma4.mp3");
+sonido.play();
+   }
+   function idioma5() {
+      idioma.setAttribute("placeholder", "Escribe texto en japonés");
+      idioma.setAttribute("lang", "ja");
+      sonido.setAttribute("src", "idioma5.mp3");
+sonido.play();
+   }
+   
+   </script>
+</body>
+</html>
