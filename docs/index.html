@@ -5,6 +5,7 @@
     <link href="otros\css\archivo de estilo.css" rel="stylesheet">
 	<link href="otros\css\menu desplegable.css" rel="stylesheet">
 <link href="otros\css\lista desplegable2.css" rel="stylesheet">
+<link rel="stylesheet" href="otros/css/email.css">
 
 <title>Codificando a ciegas.</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,23 +17,22 @@
 
 	</head>
     <body>
-<!-- Creado por JohanMusic -->
+        
+        <!-- Creado por JohanMusic -->
 
-		<audio src=""></audio>        
         <audio src=""></audio>
         
 		<header>
-		
+
          <div class="navbar">
-		 <h3 align="senter">Enlazes de accesibilidad</h3>
-		 <a href="#home">Saltar al contenido</a>
+		 <h3 align="center">Enlaces de accesibilidad</h3>
+		 <a href="javascript:onclick(location.href= '#home')" class="sr-only">Saltar al contenido</a>
     
-         <div class="dropdown" >
-        
-        <span class="reproductor" onclick="sonidos()"><button  accesskey="m" id="menuprincipal" class="btn btn-danger" data-toggle="collapse" data-target="#menu1" aria-expanded="false">Menú principal.</button></span>
+         <div class="dropdown" >        
+        <button  accesskey="m" id="menuprincipal" class="btn btn-danger" data-toggle="collapse" data-target="#menu1" aria-expanded="false">Menú principal.</button>
             
           <div id="menu1" class="collapse" role="region" area-label="Vista de menú" aria-label="Menu">
-            <h2>Enlazes de inicio.</h2>
+            <h2>Enlaces de inicio.</h2>
 			
             <nav rol="navigation" aria-label="Menú primario">                
                 <ul type="none" >
@@ -44,7 +44,7 @@
 <li><a href="otros/apps/calculadora/aplicacion.html">Calculadora accesible.</a></li>
 <li><a href="otros/html/formulario1.html">Comparte tu experiencia como desarrollador</a></li>
 <li><a href="otros/apps/teclado/teclado en pantalla.html">Teclado en pantalla</a></li>
-<li><a style="background-color: green; color: white;" onclick="ventana()" tabindex="0">Haserca de.</a></li>
+<li><a style="background-color: green; color: white;" onclick="ventana()" tabindex="0">acerca de.</a></li>
 </ul>
 </nav>
 
@@ -88,54 +88,52 @@
 </div>
 </header>
  
- 
- <div class="table-responsive">
-     <table class="table table-hover">
-        <caption align="center"><strong>Mis abilidades con la programación.</strong></caption> 
-        <thead>
-             <tr>
-                 <th>Tecnología</th>
-             <th>Porcentaje</th>
-                </tr>
-         </thead>
-         <tbody>
-             <tr>
-                 <td>
-                     <a href="otros\html\Que es html.html"><img src="imájenes/html.png" width="48px" high="108px" alt="HTML5"/></a>
-                </td>
-            <td>
-                <progress min="0" max="100" value="75"></progress>
-            </td> 
-            </tr>
+<table class="table table-bordered table-inverse table-responsive">
+    <caption class="center"><strong>Mis habilidades con la programación.</strong></caption> 
+
+    <thead class="thead-inverse">
         <tr>
-            <td>
-                <a href="otros\html\que es css.html">CSS3</a>
-            </td>
-        <td>
-            <progress min="0" max="100" value="30"></progress>
-        </td>
-        </tr> 
-    <tr>
+            <th>Tecnología</th>
+             <th>Porcentaje</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <a href="otros\html\Que es html.html"><img src="imájenes/html.png" width="48px" high="108px" alt="HTML5"/></a>
+               </td>
+           <td>
+               <progress min="0" max="100" value="90"></progress>
+           </td> 
+           </tr>
+       <tr>
+           <td>
+               <a href="otros\html\que es css.html">CSS3</a>
+           </td>
+       <td>
+           <progress min="0" max="100" value="40"></progress>
+       </td>
+       </tr> 
+   <tr>
 <td>
-    <a href="otros\html\que es java script.html">JavaScript</a>
+   <a href="otros\html\que es java script.html">JavaScript</a>
 </td>
 <td>
-    <progress min="0" max="100" value="16"></progress>
+   <progress min="0" max="100" value="65"></progress>
 </td>    
 </tr>    
 <tr>
-    <td>
-        <a href="otros/html/que es php.html">PHP</a>
-    </td>
+   <td>
+       <a href="otros/html/que es php.html">PHP</a>
+   </td>
 <td>
-    <progress min="0" max="100" value="10"></progress>
+   <progress min="0" max="100" value="10"></progress>
 </td>
-</tr>    
-</tbody>
-     </table>
- </div>
-    
-
+</tr>               
+        </tbody>
+</table>
+ 
+        
 <main class="container">
 <!-- Este es la sección principal -->
 <div class="page" id="home">
@@ -161,7 +159,7 @@ A parte de las futuras lecciones y tutoriales, también subiré mis composicione
 <p>Crezcamos y esforcémonos cada día para ser mejores.</p>
 </article>
 
-<article><section><h3 align="center">Diviértete con los juegos accesibles de Fabián Arias.</h3></section></article>
+<article><section><h3 align="center">Diviértete con los juegos accesibles de Fabián Arias.</h3></section>
 
 <p>¿ Tienes un dispositivo <strong>Android</strong> y quieres divertirte y pasarla bien de manera accesible?. Te alegrará saber que hay un desarrollador que ama este tipo de apps, y que a desarrollado muchos de estos geniales juegos para nosotros (Los ciegos del mundo).<br> Te invito a visitar su sitio web, donde podrás encontrar muchas de estas apps maravillosas. Ademas, te dejo 3 de sus juegos con descarga directa para que los puedas disfrutar.
     <ul type="none">
@@ -171,7 +169,10 @@ A parte de las futuras lecciones y tutoriales, también subiré mis composicione
         <li><a href="https://www.fabianarias.store" target="blank_">Tienda de juegos de Fabián Arias.</a></li>
     </ul><br>
     Disfruta y diviértete mucho jugando y aprendiendo☺.</p>
-<aside><h2 align="center">Créditos.</h2></aside>
+</article>
+
+
+    <aside><h2 align="center">Créditos.</h2></aside>
 <p class="first"><em>los autores de este documento web son: Johan Gutierrez programador web. Diseñé el documento HTML y escribí el código. Katerin Gutierrez diseñadora web tuvo participación en este proyecto, escribió el código CSS y estilizo esta página.</em></p>
 <footer>
 <h3>Comparte en:</h3> 
@@ -181,7 +182,7 @@ A parte de las futuras lecciones y tutoriales, también subiré mis composicione
 <button onclick="location.href='https://twitter.com/intent/tweet?text= Sitio%20con%20contenido%20accesible%20como%20tutoriales%20en%20audio%20y%20mas&url=https://johancode.tonohost.com&hashtags=Mi%20web'">Twitter</button>
 <button onclick="location.href='https://www.linkedin.com/sharing/share-offsite/?url=http://johancode.tonohost.com'">LinkedIn</button>
 </div>
-<h4 class="contacts">Contáctame</h4>
+<h4 class="contacts">Contácteme</h4>
 <div>
     <fieldset>
         <legend>Elige tipo de contacto.</legend>
@@ -196,6 +197,31 @@ A parte de las futuras lecciones y tutoriales, también subiré mis composicione
 </label>
 </fieldset>
 </div>
+<div class="container">
+    <h3>Rellena el formulario de contacto:</h3>
+    <form id="form" role="form">
+        <div class="field">
+          <label for="from_name">Tu nombre:</label>
+          <input type="text" name="from_name" id="from_name" required>
+        </div>
+        <div class="field">
+          <label for="mensaje">Su mensaje:</label>
+          <textarea type="text" name="mensaje" id="mensaje"></textarea>
+        </div>
+        <div class="field">
+          <label for="user_email">Su correo electrónico:</label>
+          <input type="text" name="user_email" id="user_email" required>
+        </div>
+        
+        <div class="field">
+            <label for="pregunta_programacion">¿Eres programador?</label>
+            <input type="checkbox" name="pregunta_programacion" id="pregunta_programacion" value="Sí, soy programador">
+          </div>
+        
+        <input type="submit" id="button" value="Enviar" >
+      </form>
+    </div>
+
 <!-- Contacts section end -->
 <div class="copyright">&copy; 2021 JohanMusic. Todos los derechos reservados.</div>
     </footer>
@@ -207,5 +233,9 @@ A parte de las futuras lecciones y tutoriales, también subiré mis composicione
 <script src="otros/javascript/teclado2.js"></script>
 	<script src="otros/javascript/Archivo.js"></script>
 <script src="otros/javascript/audios.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript" src="otros/javascript/email.js"></script>
+
 </body>
 </html>
