@@ -1,8 +1,8 @@
 var menuprincipal = document.querySelector("#menuprincipal");
 function menuaudio() {
 
-if (menuprincipal.innerHTML == "Menú principal.") {
-menuprincipal.innerHTML="Menú principal";
+if (menuprincipal.ariaExpanded == true) {
+menuprincipal.innerHTML="Menú principal (Abierto)";
 
     let audioEtiqueta = document.querySelector("audio")
 
