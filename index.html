@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="otros/javascript/librerías/bootstrap-3.3.7/dist/css/bootstrap.min.css">
     <link href="otros\css\archivo de estilo.css" rel="stylesheet">
 	<link href="otros\css\menu desplegable.css" rel="stylesheet">
-<link href="otros/css/bootstrap-accessibility.css" rel="stylesheet">
+
 <link rel="stylesheet" href="otros/css/email.css">
 
 <title>Codificando a ciegas.</title>
@@ -197,37 +197,32 @@ A parte de las futuras lecciones y tutoriales, también subiré mis composicione
 </label>
 </fieldset>
 </div>
+
 <div class="container">
     <h3>Rellena el formulario de contacto:</h3>
-    <form id="form">
+    <form id="form" role="form">
         <div class="field">
-          <label for="from_name">from_name</label>
-          <input type="text" name="from_name" id="from_name">
+          <label for="from_name">Escriba su nombre:</label>
+          <input type="text" name="from_name" id="from_name" placeholder="Nombre">
         </div>
         <div class="field">
-          <label for="mensaje">mensaje</label>
-          <input type="text" name="mensaje" id="mensaje">
+          <label for="mensaje">Escriba su mensaje:</label>
+          <input type="text" name="mensaje" id="mensaje" placeholder="Mensaje">
         </div>
         <div class="field">
-          <label for="user_email">user_email</label>
-          <input type="text" name="user_email" id="user_email">
+          <label for="user_email">Escriba su correo electrónico:</label>
+          <input type="text" name="user_email" id="user_email" placeholder="Email">
         </div>
-        <div class="field">
-          <label for="pregunta_programacion">pregunta_programacion</label>
-          <input type="text" name="pregunta_programacion" id="pregunta_programacion">
-        </div>
-        <div class="field">
-          <label for="reply_to">reply_to</label>
-          <input type="text" name="reply_to" id="reply_to">
-        </div>
+        
       
-        <input type="submit" id="button" value="Send Email" >
+        <input type="submit" id="button" value="Enviar">
       </form>
-    </div>
-
+      </div>
+        
 <!-- Contacts section end -->
 <div class="copyright">&copy; 2021 JohanMusic. Todos los derechos reservados.</div>
     </footer>
+    
     
 	<script src="otros/javascript/librerías/jquery/jquery-3.4.1.min.js"></script>
     <script src="otros/javascript/librerías/bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
@@ -237,8 +232,12 @@ A parte de las futuras lecciones y tutoriales, también subiré mis composicione
 	<script src="otros/javascript/Archivo.js"></script>
 <script src="otros/javascript/audios.js"></script>
 
-<script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script type="text/javascript" src="otros/javascript/email.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
+<script type="text/javascript">
+  emailjs.init('user_8sUS47BYtlWcPYId4PrgM')
+
+</script>
+<script src="otros/javascript/email.js"></script>
 </body>
 </html>

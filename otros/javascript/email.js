@@ -1,22 +1,20 @@
-emailjs.init('user_8sUS47BYtlWcPYId4PrgM')
-
-Hconst btn = document.getElementById('button');
+const btn = document.getElementById('button');
 
 document.getElementById('form')
  .addEventListener('submit', function(event) {
    event.preventDefault();
 
-   btn.value = 'Sending...';
+   btn.value = 'Enviando...';
 
    const serviceID = 'default_service';
    const templateID = 'contact_form. ';
 
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
-      btn.value = 'Send Email';
-      alert('Sent!');
+      btn.value = 'Enviar';
+      alert('Enviado!');
     }, (err) => {
-      btn.value = 'Send Email';
+      btn.value = 'Enviar';
       alert(JSON.stringify(err));
     });
 });
