@@ -9,7 +9,7 @@ menuprincipal.innerHTML="Menú principal. (Abierto)";
       audioEtiqueta.setAttribute("src", "audio/audex/audio.mp3")
       audioEtiqueta.play()
       console.log(`Reproduciendo: ${audioEtiqueta.src}`)
-      document.querySelector("#inicio").focus();
+      document.querySelector("#homeFocus").focus();
     }
 
   else {  
